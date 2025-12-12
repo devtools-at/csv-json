@@ -1,0 +1,44 @@
+{
+  "name": "@devtools-at/csv-json",
+  "version": "1.0.0",
+  "description": "Convert between CSV and JSON formats",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "csv-json",
+    "devtools",
+    "utility",
+    "converter",
+    "encoder",
+    "decoder"
+  ],
+  "author": "DevTools.at",
+  "license": "MIT",
+  "homepage": "https://devtools.at/tools/csv-json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtools-at/csv-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devtools-at/csv-json/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
